@@ -1,4 +1,4 @@
-# CLIP - Multilingual Zero-Shot Classification 🌍
+# CLIP - Multilingual Zero-Shot Classification
 
 Implémentation et amélioration du modèle CLIP pour la classification zero-shot sur CIFAR-100, avec extension multilingue (Anglais, Français, Allemand).
 
