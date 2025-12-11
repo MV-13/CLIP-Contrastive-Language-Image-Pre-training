@@ -99,5 +99,5 @@ Les scripts génèrent des graphiques PNG avec :
 
 ---
 
-**Auteur** : Marine VIEILLARD / Projet M2 Maths & IA - NLP  
-**Date** : Décembre 2024
+**Auteurs** : Marine VIEILLARD & Amine GRINI 
+**Date** : Décembre 2025
