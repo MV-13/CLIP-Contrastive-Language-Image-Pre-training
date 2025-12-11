@@ -9,8 +9,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Utilisation du device : {device}")
 
 # Charging the CLIP model
-# The paper recommends ViT-L/14@336px for the best performance[cite: 239], but ViT-B/32 is much lighter
-model_name = "ViT-B/32"
+# The paper recommends ViT-L/14@336px for the best performance, but ViT-B/32 is much lighter
+model_name = "ViT-L/14@336px" #"ViT-B/32"
 model, preprocess = clip.load(model_name, device=device)
 print(f"Model {model_name} loaded.")
 

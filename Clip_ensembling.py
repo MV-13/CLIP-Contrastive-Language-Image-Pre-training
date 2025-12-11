@@ -5,18 +5,17 @@ from torchvision.datasets import CIFAR100
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-# Configuration
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
 
 # Loading the model
-model, preprocess = clip.load("ViT-B/32", device=device)
+model, preprocess = clip.load("ViT-L/14@336px", device=device)
 
 # Dataset CIFAR-100
 dataset = CIFAR100(root=os.path.expanduser("~/.cache"), download=True, train=False, transform=preprocess)
 dataloader = DataLoader(dataset, batch_size=32, shuffle=False)
 
-# 4. IMPROVEMENT: Prompt Ensembling : instead of a single sentence, we use multiple to "guide" the model from different angles
+# Prompt Ensembling : instead of a single sentence, we use multiple to "guide" the model from different angles
 templates = [
     "a photo of a {}.",
     "a bad photo of a {}.",
